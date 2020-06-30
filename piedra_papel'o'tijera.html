@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var playerScore = 0;
+     var computerScore = 0;
+     var playerSelection = prompt('piedra', 'papel', 'tijera');
+     var choise = piedra, papel, tijera
+
+     
+     
+     
+     function computerPlay(choise){
+
+         var x = choise[Math.floor(Math.random()* choise.lenght)]
+         
+        document.write(x);
+     }
+
+    const computerSelection = computerPlay(choise);
+
+    if (playerSelection == computerSelection){
+        console.log("empate, intenta denuevo");
+    }else if(playerSelection === "piedra" && computerSelection === "tijera"); {
+        playerScore++;
+    console.log("'Tu ganaste' , ${playerSelection} gana a ${computerSelection},  player ${playerScore} vs player ${computerScore} ")
+         ;
+    }else if(playerSelection === "papel" && computerSelection === "piedra"); {
+        playerScore++;
+        console.log("'Tu ganaste' , ${playerSelection} gana a ${computerSelection}, player ${playerScore} vs player ${computerScore}");
+    }else if(playerSelection === "tijera" && computerSelection === "papel"); {
+        playerScore++;
+        console.log("'Tu ganaste' , ${playerSelection} gana a ${computerSelection}, player ${playerScore} vs player ${computerScore}");
+    }else{
+        computerScore++;
+        console.log("'Perdiste, intenta denuevo', ${computerSelection} gana a ${playerSelection}, player ${playerScore} vs player ${computerScore}")
+    };
+
+    function game(); {
+        for(i=0, i < 5, i++);
+       console.log('Game Over')
+    };
+    
+    </script>
+</body>
+</html>
